@@ -1,0 +1,3 @@
+npm create Vite@latest
+npm install tailwindcss @tailwindcss/vite
+npm i react-router-dom lucide-react react-hot-toast

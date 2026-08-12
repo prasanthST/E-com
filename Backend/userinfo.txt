@@ -1,0 +1,18 @@
+//admin
+ {
+     "email":"tutorjoes1@gmai4.com" ,
+     "password" :"12345678910" 
+ }
+
+//user 
+{"email":"stprasanth0450@gmail.com" ,
+     "password" :"123123123" 
+ }
+ {
+    "email": "tutorjoes1@gmai4.com",
+    "password": "12345678910"
+}
+{
+    "email": "vijithilthima@gmai4.com",
+    "password": "12345678910"
+}

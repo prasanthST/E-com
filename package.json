@@ -1,0 +1,31 @@
+{
+  "name": "ecom",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node Backend/server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@tailwindcss/vite": "^4.3.0",
+    "axios": "^1.13.2",
+    "bcryptjs": "^3.0.3",
+    "cloudinary": "^2.10.0",
+    "cookie-parser": "^1.4.7",
+    "cors": "^2.8.6",
+    "crypto": "^1.0.1",
+    "dotenv": "^17.2.3",
+    "express": "^5.1.0",
+    "express-fileupload": "^1.5.2",
+    "jsonwebtoken": "^9.0.3",
+    "mongoose": "^9.0.0",
+    "nodemailer": "^8.0.5",
+    "router": "^2.2.0",
+    "tailwindcss": "^4.3.0",
+    "validator": "^13.15.23"
+  }
+}
