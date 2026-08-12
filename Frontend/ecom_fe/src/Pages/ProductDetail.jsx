@@ -6,10 +6,10 @@ import Rating from '../Components.jsx/Rating'
 import { Calendar, MessageSquare, Minus, PackageCheck, PackageX, Plus, ShoppingCart } from 'lucide-react'
 import { useSelector, useDispatch } from 'react-redux'
 import { useParams } from 'react-router-dom'
-import { getProductDetails, removeErrors } from '../feathures/products/productSlice'
+import { getProductDetails, removeErrors } from '../features/products/productSlice'
 import toast from 'react-hot-toast'
 import { calculateDiscount, formatDate } from '../utils/formatter'
-import { addToCartItems, removeMessage } from '../feathures/Cart/cartSlice'
+import { addToCartItems, removeMessage } from '../features/Cart/cartSlice'
 
 const ProductDetail = () => {
     const { userRating, setUserRating } = useState(0)

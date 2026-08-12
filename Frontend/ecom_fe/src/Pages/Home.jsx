@@ -5,7 +5,7 @@ import Footer from '../Components.jsx/Footer';
 import Product from '../Components.jsx/Product';
 import PageTitle from '../Components.jsx/PageTitle';
 import { useDispatch, useSelector } from 'react-redux';
-import { getProduct, removeErrors } from '../feathures/products/productSlice';
+import { getProduct, removeErrors } from '../features/products/productSlice';
 import Loader from '../Components.jsx/Loader';
 import toast from "react-hot-toast"
 

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import  { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { toast } from 'react-hot-toast';
@@ -12,8 +12,8 @@ import {
     removeErrors,
     resetSuccess,
     loadFromStorage,
-} from '../feathures/Checkout/checkoutSlice';
-import { clearCart } from '../feathures/Cart/cartSlice';
+} from '../features/Checkout/checkoutSlice';
+import { clearCart } from '../features/Cart/cartSlice';
 import PageTitle from '../Components.jsx/PageTitle';
 import Navbar from '../Components.jsx/Navbar';
 import Footer from '../Components.jsx/Footer';

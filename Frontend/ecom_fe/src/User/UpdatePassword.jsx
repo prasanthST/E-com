@@ -2,7 +2,7 @@ import { useEffect, useState } from "react"
 import Navbar from "../Components.jsx/Navbar"
 import toast from "react-hot-toast";
 import { useDispatch, useSelector } from "react-redux";
-import { removeErrors, removeSuccess, updatePassword } from "../feathures/User/userSlice";
+import { removeErrors, removeSuccess, updatePassword } from "../features/User/userSlice";
 import { useNavigate } from "react-router-dom";
 
 const UpdatePassword = () => {

@@ -1,7 +1,7 @@
 import  { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useParams, Link } from 'react-router-dom';
-import { getOrderDetail, clearOrders } from '../feathures/Orders/orderSlice';
+import { getOrderDetail, clearOrders } from '../features/Orders/orderSlice';
 import { Loader2, MapPin, CreditCard, Calendar, Package } from 'lucide-react';
 import PageTitle from '../Components.jsx/PageTitle';
 import Navbar from '../Components.jsx/Navbar';

@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"
 import { Link, useNavigate } from "react-router-dom";
 import {useDispatch, useSelector} from "react-redux"
-import {login, removeErrors, removeSuccess} from "../feathures/User/userSlice"
+import {login, removeErrors, removeSuccess} from "../features/User/userSlice"
 import toast from "react-hot-toast";
 
 

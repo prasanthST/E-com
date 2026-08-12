@@ -2,7 +2,7 @@ import { Menu, Search, ShoppingBag, ShoppingCart, User, X } from 'lucide-react'
 import { useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { Link, useNavigate } from 'react-router-dom'
-import { logout } from '../feathures/User/userSlice'
+import { logout } from '../features/User/userSlice'
 
 const Navbar = () => {
     const [open, setOpen] = useState(false)

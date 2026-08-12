@@ -3,7 +3,7 @@ import Navbar from "../Components.jsx/Navbar"
 import PageTitle from "../Components.jsx/PageTitle"
 import { useDispatch, useSelector } from "react-redux";
 import toast from "react-hot-toast";
-import { forgetPassword, removeErrors, removeSuccess } from "../feathures/User/userSlice";
+import { forgetPassword, removeErrors, removeSuccess } from "../features/User/userSlice";
 
 
 const ForgetPassword = () => {

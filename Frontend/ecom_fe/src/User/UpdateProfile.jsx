@@ -2,7 +2,7 @@ import { useDispatch, useSelector } from "react-redux";
 import Navbar from "../Components.jsx/Navbar";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { loadUser, removeErrors, removeSuccess, updateProfile } from "../feathures/User/userSlice";
+import { loadUser, removeErrors, removeSuccess, updateProfile } from "../features/User/userSlice";
 import toast from "react-hot-toast";
 
 const UpdateProfile = () => {

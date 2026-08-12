@@ -4,7 +4,7 @@ import PageTitle from "../Components.jsx/PageTitle"
 import { useDispatch, useSelector } from "react-redux"
 import toast from "react-hot-toast"
 import { useNavigate, useParams } from "react-router-dom"
-import { removeErrors, removeSuccess, resetPassword } from "../feathures/User/userSlice"
+import { removeErrors, removeSuccess, resetPassword } from "../features/User/userSlice"
 
 const ResetPassword = () => {
 

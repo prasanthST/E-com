@@ -8,7 +8,7 @@ import Products from './Pages/Products'
 import Login from './User/Login'
 import {useDispatch, useSelector } from "react-redux"
 import { useEffect } from 'react'
-import { loadUser } from './feathures/User/userSlice'
+import { loadUser } from './features/User/userSlice'
 import Profile from './User/Profile'
 import UpdateProfile from './User/UpdateProfile'
 import ProtectedRoute from './Components.jsx/ProtectedRoute'

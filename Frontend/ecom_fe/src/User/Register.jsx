@@ -2,8 +2,8 @@ import { useEffect, useState } from "react"
 import toast from "react-hot-toast"
 import { useSelector , useDispatch } from "react-redux"
 import { Link, useNavigate } from "react-router-dom"
-import { register, removeSuccess } from "../feathures/User/userSlice";
-import { removeErrors } from "../feathures/products/productSlice";
+import { register, removeSuccess } from "../features/User/userSlice";
+import { removeErrors } from "../features/products/productSlice";
 
 const Register = () => {
 
