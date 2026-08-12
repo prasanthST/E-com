@@ -8,7 +8,6 @@ import {
     setShippingAddress,
     setPaymentMethod,
     setOrderItems,
-    clearCheckout,
     removeErrors,
     resetSuccess,
     loadFromStorage,
