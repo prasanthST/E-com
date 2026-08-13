@@ -16,10 +16,10 @@ import UpdatePassword from './User/UpdatePassword'
 import ForgetPassword from './User/ForgetPassword'
 import ResetPassword from './User/ResetPassword'
 import Cart from './cart/Cart'
-import Checkout from './checkout/CheckOut'
-import OrderSuccess from './checkout/OrderSuccess'
-import SingleOrderDetail from './orders/SingleOrderDetail'
-import Orders from './orders/Orders'
+import Checkout from './checkout/CheckOut.jsx'
+import OrderSuccess from './checkout/OrderSuccess.jsx'
+import SingleOrderDetail from "./orders/SingleOrderDetail.jsx"
+import Orders from './orders/Orders.jsx'
 
 const App = () => {
   //LoadUser , its used for user Authentication 
