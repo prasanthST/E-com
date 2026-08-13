@@ -17,7 +17,7 @@ import PageTitle from '../Components.jsx/PageTitle';
 import Navbar from '../Components.jsx/Navbar';
 import Footer from '../Components.jsx/Footer';
 
-const Checkout = () => {
+const CheckOut = () => {
     const dispatch = useDispatch();
     const navigate = useNavigate();
     
@@ -373,4 +373,4 @@ const Checkout = () => {
     );
 };
 
-export default Checkout;
+export default CheckOut;
