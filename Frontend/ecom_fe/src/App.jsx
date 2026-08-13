@@ -18,8 +18,8 @@ import ResetPassword from './User/ResetPassword'
 import Cart from './cart/Cart'
 import CheckOut from './checkOut/CheckOut.jsx'
 import OrderSuccess from './checkOut/OrderSuccess.jsx'
-import SingleOrderDetail from "./orders/SingleOrderDetail"
-import Orders from './orders/Orders'
+import SingleOrderDetail from "./Orders/SingleOrderDetail.jsx"
+import Orders from './Orders/Orders.jsx'
 
 const App = () => {
   //LoadUser , its used for user Authentication 
