@@ -16,8 +16,8 @@ import UpdatePassword from './User/UpdatePassword'
 import ForgetPassword from './User/ForgetPassword'
 import ResetPassword from './User/ResetPassword'
 import Cart from './cart/Cart'
-import CheckOut from './checkout/CheckOut.jsx'
-import OrderSuccess from './checkout/OrderSuccess'
+import CheckOut from './checkOut/CheckOut.jsx'
+import OrderSuccess from './checkOut/OrderSuccess.jsx'
 import SingleOrderDetail from "./orders/SingleOrderDetail"
 import Orders from './orders/Orders'
 
