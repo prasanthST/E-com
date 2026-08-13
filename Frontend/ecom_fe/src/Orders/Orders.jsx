@@ -142,7 +142,7 @@ const Orders = () => {
                     ) : (
                         // ✅ Orders List
                         <div className="space-y-4">
-                            {orders.map((order) => (
+                            {orders?.map((order) => (
                                 <div
                                     key={order._id}
                                     className="bg-white rounded-2xl shadow-lg p-6 hover:shadow-xl transition-shadow"
@@ -186,7 +186,7 @@ const Orders = () => {
                                     {order.orderItems && order.orderItems.length > 0 && (
                                         <div className="mt-4 pt-4 border-t border-gray-100">
                                             <div className="flex flex-wrap gap-2">
-                                                {order.orderItems.slice(0, 5).map((item, index) => (
+                                                {order.orderItems.slice(0, 5)?.map((item, index) => (
                                                     <img
                                                         key={index}
                                                         src={item.image}

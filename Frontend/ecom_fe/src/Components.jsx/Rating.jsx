@@ -21,7 +21,7 @@ const Rating = ({value=0 , onRatingChange , disable = false , showValue = true }
    <div className='flex item-center gap-2'>
     {/* star */}
      <div className='flex item-center gap-1'>
-      {[1,2,3,4,5,].map((star)=>{
+      {[1,2,3,4,5,]?.map((star)=>{
         const filled = hover ? star <= hover : star <= rating;
         return <Star key={star} size={18}
         className={`transition-all duration-200 

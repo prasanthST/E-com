@@ -115,7 +115,7 @@ const OrderSuccess = () => {
                             <div className="bg-gray-50 rounded-xl p-6 mb-6 text-left">
                                 <h3 className="font-bold text-slate-800 mb-3">Order Items</h3>
                                 <div className="space-y-3">
-                                    {order.orderItems.map((item, index) => (
+                                    {order.orderItems?.map((item, index) => (
                                         <div key={index} className="flex items-center gap-3 pb-3 border-b border-gray-200 last:border-0 last:pb-0">
                                             <img
                                                 src={item.image}

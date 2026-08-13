@@ -40,7 +40,7 @@ const Pagination = ({
       </div>
       {/* Page Number */}
       <div className="flex gap-1">
-        {getPageNumber().map((number) => (
+        {getPageNumber()?.map((number) => (
           <button key={number} onClick={() => onPageChange(number)} 
           className={`${btnBase} ${currentPage === number? activeBtn : inactiveBtn}`}>{number}
           </button>

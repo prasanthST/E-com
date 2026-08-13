@@ -55,7 +55,7 @@ const Checkout = () => {
 
     useEffect(() => {
         if (cartItems.length > 0) {
-            const items = cartItems.map(item => ({
+            const items = cartItems?.map(item => ({
                 name: item.name,
                 price: Number(item.price),
                 quantity: Number(item.quantity),
@@ -149,7 +149,7 @@ const Checkout = () => {
                 phoneNo: Number(formData.phoneNo),
                 email: formData.email, // ✅ Added email
             },
-            orderItems: orderItems.map(item => ({
+            orderItems: orderItems?.map(item => ({
                 name: item.name,
                 price: Number(item.price),
                 quantity: Number(item.quantity),

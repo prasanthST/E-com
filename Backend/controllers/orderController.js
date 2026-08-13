@@ -85,7 +85,7 @@ export const updateOrderStatus =async (req,res,next)=>{
         return next(new HandleError("This order is already been delivered",404))
     }
     // Update Stock
-    await Promise.all(order.orderItems.map((item)=>updateQuantity(item.product , item.quantity)))
+    await Promise.all(order.orderItems?.map((item)=>updateQuantity(item.product , item.quantity)))
 
     order.orderStatus = req.body.status;
     if(order.orderStatus === "Delivered"){

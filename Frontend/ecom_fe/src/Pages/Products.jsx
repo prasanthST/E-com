@@ -72,7 +72,7 @@ const handleCategory=(cat)=>{
           <h3 className="text-xl font-semibold mb-4 text-gray-800 border-b 
           border-slate-200 pb-2">Categories</h3>
           <ul className="space-y-2">
-            {["All","Electronic", "Dress","Kitchen","Toys","Sports","Accessories"].map((cat)=>(
+            {["All","Electronic", "Dress","Kitchen","Toys","Sports","Accessories"]?.map((cat)=>(
               <li key={cat}>
                 <button onClick={()=>handleCategory(cat)} className="text-gray-600 hover:text-blue-600
                  transition-colors">{cat}</button>
@@ -87,7 +87,7 @@ const handleCategory=(cat)=>{
           <span className="text-gray-500 text-sm ">{products?.length || 0 } items found</span>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-      {products && products.map((product)=><Product key={product._id} product={product}/>)}
+      {products && products?.map((product)=><Product key={product._id} product={product}/>)}
       {/* No products found */}
       {products?.length === 0 && (
       <div className="text-center py-20">

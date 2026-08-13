@@ -36,7 +36,7 @@ const ImageSlider = () => {
                 transform:
                     `translateX(-${current * 100}%)`
             }}>
-                {images.map((image, index) => (
+                {images?.map((image, index) => (
                     <img src={image} key={index} className='h-75 w-full md:112.5 object-cover shrink-0' />
                 ))}
             </div>
@@ -50,7 +50,7 @@ const ImageSlider = () => {
             </button>
             {/*indicators*/}
             <div className='absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2'>
-                {images.map((_, index)=>(
+                {images?.map((_, index)=>(
                     <button key={index} onClick={()=>setCurrent(index)} className={`h-2 rounded-full transition-all ${current === index ? "w-6 bg-white" : "bg-white/50"}`}></button>
                 ))}
             </div>

@@ -46,7 +46,7 @@ const Cart = () => {
                                         <div className="text-center py-12">
                                             <p className="text-gray-500">Your cart is empty</p>
                                         </div>
-                                    ) : (cartItems.map((item) => <CartItem item={item} key={item.product} />)
+                                    ) : (cartItems?.map((item) => <CartItem item={item} key={item.product} />)
                                     )}
                                 </div>
                             </div>
