@@ -16,7 +16,7 @@ import UpdatePassword from './User/UpdatePassword'
 import ForgetPassword from './User/ForgetPassword'
 import ResetPassword from './User/ResetPassword'
 import Cart from './cart/Cart'
-import Checkout from './checkout/CheckOut'
+import CheckOut from './checkout/CheckOut'
 import OrderSuccess from './checkout/OrderSuccess'
 import SingleOrderDetail from "./orders/SingleOrderDetail"
 import Orders from './orders/Orders'
@@ -48,7 +48,7 @@ const App = () => {
         <Route path="/password/forget" element={<ForgetPassword/>}/>
         <Route path="/reset/:token" element={<ResetPassword/>}/>
         <Route path="/cart" element={<Cart/>}/>
-        <Route path="/checkout" element={<ProtectedRoute element={<Checkout/>}/>}/>
+        <Route path="/checkout" element={<ProtectedRoute element={<CheckOut/>}/>}/>
         {/* <Route path="/ordersuccess/:id" element={<ProtectedRoute element={<OrderSuccess/>}/>}/> */}
         <Route path="/ordersuccess/:id"  element={<OrderSuccess/>}/>
         <Route path="/orders/user"  element={<Orders/>}/>
