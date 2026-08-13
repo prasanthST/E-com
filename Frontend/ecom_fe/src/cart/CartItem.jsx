@@ -1,7 +1,7 @@
 import { Minus, Plus, Trash2 } from "lucide-react"
 import toast from "react-hot-toast";
 import { useDispatch } from "react-redux";
-import { addToCartItems, removeErrors, removeItemsFromcart } from "../features/Cart/cartSlice";
+import { addToCartItems, removeErrors, removeItemsFromcart } from "../features/cartF/cartSlice";
 import { useState } from "react";
 
 const CartItem = ({ item }) => {

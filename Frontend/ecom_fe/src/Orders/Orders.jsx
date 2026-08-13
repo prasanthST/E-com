@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
-import { getMyOrders } from '../features/Orders/orderSlice';
+import { getMyOrders } from '../features/ordersF/orderSlice';
 import { Loader2, Package, Clock, Truck, CheckCircle, ShoppingBag } from 'lucide-react';
 import PageTitle from '../Components.jsx/PageTitle';
 import Navbar from '../Components.jsx/Navbar';

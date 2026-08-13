@@ -11,8 +11,8 @@ import {
     removeErrors,
     resetSuccess,
     loadFromStorage,
-} from '../features/Checkout/checkoutSlice';
-import { clearCart } from '../features/Cart/cartSlice';
+} from '../features/checkoutF/checkOutSlice';
+import { clearCart } from '../features/cartF/cartSlice';
 import PageTitle from '../Components.jsx/PageTitle';
 import Navbar from '../Components.jsx/Navbar';
 import Footer from '../Components.jsx/Footer';

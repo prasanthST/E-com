@@ -9,7 +9,7 @@ import { useParams } from 'react-router-dom'
 import { getProductDetails, removeErrors } from '../features/products/productSlice'
 import toast from 'react-hot-toast'
 import { calculateDiscount, formatDate } from '../utils/formatter'
-import { addToCartItems, removeMessage } from '../features/Cart/cartSlice'
+import { addToCartItems, removeMessage } from '../features/cartF/cartSlice'
 
 const ProductDetail = () => {
     const { userRating, setUserRating } = useState(0)

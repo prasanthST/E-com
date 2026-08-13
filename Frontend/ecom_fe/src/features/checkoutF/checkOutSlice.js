@@ -44,7 +44,7 @@ const initialState = {
     order: null,
 };
 
-const checkoutSlice = createSlice({
+const CheckOutSlice = createSlice({
     name: "checkout",
     initialState,
     reducers: {
@@ -78,7 +78,7 @@ const checkoutSlice = createSlice({
         },
         setOrderItems: (state, action) => {
             state.orderItems = action.payload;
-            checkoutSlice.caseReducers.calculateTotals(state);
+            CheckOutSlice.caseReducers.calculateTotals(state);
             localStorage.setItem("orderItems", JSON.stringify(state.orderItems));
         },
         clearCheckout: (state) => {
@@ -110,7 +110,7 @@ const checkoutSlice = createSlice({
             const savedItems = localStorage.getItem("orderItems");
             if (savedItems) {
                 state.orderItems = JSON.parse(savedItems);
-                checkoutSlice.caseReducers.calculateTotals(state);
+                CheckOutSlice.caseReducers.calculateTotals(state);
             }
         },
     },
@@ -145,6 +145,6 @@ export const {
     resetSuccess,
     removeErrors,
     loadFromStorage,
-} = checkoutSlice.actions;
+} = CheckOutSlice.actions;
 
-export default checkoutSlice.reducer;
+export default CheckOutSlice.reducer;
