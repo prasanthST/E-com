@@ -1,12 +1,15 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import axios from 'axios'
 
+
+// ✅ Add this at the top of every slice file
+const API_URL = import.meta.env.VITE_API_URL || '';
 // product details for products page 
 export const getProduct = createAsyncThunk("product/getProduct",async ({keyword , page=1, category},{rejectWithValue})=>{
     try {
         //  const link =  keyword ?`/api/v1/products?keyword=${encodeURIComponent(keyword)}&page=${page}`
         //  :`/api/v1/products?page=${page}` 
-        let link = "/api/v1/products?page="+ page;
+        let link = `${API_URL}/api/v1/products?page=${page}`;
         if(category){
           link += `&category=${category}`; 
         }
@@ -25,7 +28,7 @@ export const getProduct = createAsyncThunk("product/getProduct",async ({keyword 
 //All product details for home page 
 export const getProductDetails = createAsyncThunk("product/getProductDetails",async (id,{rejectWithValue})=>{
     try {
-         const link =`/api/v1/product/${id}`;
+         const link =`${API_URL}/api/v1/product/${id}`;
          const {data} = await axios.get(link)
         //  console.log(data)
          return data; 

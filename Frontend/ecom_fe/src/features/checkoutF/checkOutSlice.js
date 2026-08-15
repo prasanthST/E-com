@@ -1,6 +1,9 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import axios from "axios";
 
+
+// ✅ Add this at the top of every slice file
+const API_URL = import.meta.env.VITE_API_URL || '';
 export const createNewOrder = createAsyncThunk("checkout/createNewOrder",
 async (orderData, { rejectWithValue }) => {
         try {
@@ -9,7 +12,7 @@ async (orderData, { rejectWithValue }) => {
                     "Content-Type": "application/json",
                 },
             };
-            const { data } = await axios.post("/api/v1/new/order", orderData, config);
+            const { data } = await axios.post(`${API_URL}/api/v1/new/order`, orderData, config);
             return data;
         } catch (error) {
             return rejectWithValue(

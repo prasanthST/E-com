@@ -1,12 +1,15 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import axios from "axios";
 
+
+// ✅ Add this at the top of every slice file
+const API_URL = import.meta.env.VITE_API_URL || '';
 // Fetch All Orders for Logged-in User
 export const getMyOrders = createAsyncThunk(
   "order/getMyOrders",
   async (_, { rejectWithValue }) => {
     try {
-      const { data } = await axios.get("/api/v1/orders/user");
+      const { data } = await axios.get(`${API_URL}/api/v1/orders/user`);
       console.log(data.order);
       return data.order;
     } catch (error) {
@@ -19,7 +22,7 @@ export const getMyOrders = createAsyncThunk(
 // get Single order details
 export const getOrderDetail = createAsyncThunk("order/getOrderDetail" , async(orderId ,{rejectWithValue})=>{
     try {
-        const {data} = await axios.get(`/api/v1/order/${orderId}`)
+        const {data} = await axios.get(`${API_URL}/api/v1/order/${orderId}`)
         return data.order;
     } catch (error) {
         return rejectWithValue(
