@@ -17,28 +17,34 @@ const allowedOrigins = [
     'https://*.netlify.app'
 ];
 
-app.use(cors({
-    origin: function (origin, callback) {
-        // Allow requests with no origin
-        if (!origin) return callback(null, true);
+// app.use(cors({
+//     origin: function (origin, callback) {
+//         // Allow requests with no origin
+//         if (!origin) return callback(null, true);
         
-        // Check if origin is allowed
-        if (allowedOrigins.some(allowed => 
-            origin === allowed || 
-            origin.endsWith('.netlify.app') ||
-            origin.startsWith('http://localhost')
-        )) {
-            callback(null, true);
-        } else {
-            console.log('Blocked by CORS:', origin);
-            callback(new Error('Not allowed by CORS'));
-        }
-    },
-    credentials: true,
+//         // Check if origin is allowed
+//         if (allowedOrigins.some(allowed => 
+//             origin === allowed || 
+//             origin.endsWith('.netlify.app') ||
+//             origin.startsWith('http://localhost')
+//         )) {
+//             callback(null, true);
+//         } else {
+//             console.log('Blocked by CORS:', origin);
+//             callback(new Error('Not allowed by CORS'));
+//         }
+//     },
+//     credentials: true,
+//     methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+//     allowedHeaders: ['Content-Type', 'Authorization', 'X-Requested-With']
+// }));
+// ⚠️ Only for testing - allows ALL origins
+app.use(cors({
+    origin: '*',
+    credentials: false,
     methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
-    allowedHeaders: ['Content-Type', 'Authorization', 'X-Requested-With']
+    allowedHeaders: ['Content-Type', 'Authorization']
 }));
-
 
 app.use(express.json());
 app.use(cookieParser()); // it's use for read the data from browser cookie  
