@@ -9,7 +9,9 @@ export const getProduct = createAsyncThunk("product/getProduct",async ({keyword 
     try {
         //  const link =  keyword ?`/api/v1/products?keyword=${encodeURIComponent(keyword)}&page=${page}`
         //  :`/api/v1/products?page=${page}` 
-        let link = `${API_URL}/api/v1/products?page=${page}`;
+        // let link = `${API_URL}/api/v1/products?page=${page}`;
+        let link = `https://e-com-5-p7vq.onrender.com/api/v1/products?page=${page}`;
+        
         if(category){
           link += `&category=${category}`; 
         }
