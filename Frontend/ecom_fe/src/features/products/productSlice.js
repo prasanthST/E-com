@@ -4,6 +4,7 @@ import axios from 'axios'
 
 // ✅ Add this at the top of every slice file
 const API_URL = import.meta.env.VITE_API_URL || '';
+console.log('🔍 API_URL in productSlice:', API_URL);
 // product details for products page 
 export const getProduct = createAsyncThunk("product/getProduct",async ({keyword , page=1, category},{rejectWithValue})=>{
     try {
@@ -31,6 +32,7 @@ export const getProductDetails = createAsyncThunk("product/getProductDetails",as
     try {
          const link =`${API_URL}/api/v1/product/${id}`;
          const {data} = await axios.get(link)
+         console.log('🔍 Fetching:', link); 
         //  console.log(data)
          return data; 
     } catch (error) {

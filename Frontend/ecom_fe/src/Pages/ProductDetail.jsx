@@ -12,7 +12,7 @@ import { calculateDiscount, formatDate } from '../utils/formatter'
 import { addToCartItems, removeMessage } from '../features/cartF/cartSlice'
 
 const ProductDetail = () => {
-    const { userRating, setUserRating } = useState(0)
+    const [ userRating, setUserRating ] = useState(product.rating || 0)
     const [quantity , setQuantity]=useState(1);
     const { loading, error, product } = useSelector((state) => state.product);
     const {loading:cartLoading , error:cartError,cart,success,message}=useSelector((state)=>state.cart)
@@ -29,7 +29,7 @@ const ProductDetail = () => {
 
     useEffect(() => {
         if (error)
-            toast.error(error.message);
+            toast.error(error?.message);
         dispatch(removeErrors());
     }, [dispatch, error]);
 
@@ -73,8 +73,8 @@ const ProductDetail = () => {
                     {/* image Gallery */}
                     <div>
                         <div className='aspect-square overflow-hidden rounded-xl'>
-                            <img src={product?.image[0].url}
-                                alt={product?.name}
+                            <img src={product?.image[0]?.url}
+                                alt={product?.name || "product"}
                                 className='w-full h-full object-cover transition-transform hover:scale-150 duration-700'
                                 title={product?.name} />
                         </div>
@@ -83,7 +83,7 @@ const ProductDetail = () => {
                     <div className='flex flex-col'>
                         <h3 className='text-3xl font-semibold text-gray-900 mb-2'>{product?.name}</h3>
                         <div className='flex items-center gap-4 mb-4'>
-                            <Rating value={product?.ratings} disable={true} />
+                            <Rating value={product.ratings || 0} disable={true} />
                             <span className='text-sm text-gray-500 font-medium'>{product?.numOfReviews} Verified Reviews </span>
                         </div>
                         <div className='mb-6 flex items-baseline gap-3'>
